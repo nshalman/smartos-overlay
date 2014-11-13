@@ -198,6 +198,9 @@ case "$1" in
     svcadm enable svc:/system/console-login:vt5
     svcadm enable svc:/system/console-login:vt6
 
+    # force update of sysinfo (and dump to stdout so we have in the log)
+    sysinfo -f
+
     ;;
 
 'stop')
